@@ -1,0 +1,37 @@
+﻿@using TaskAbdallahRiyad.Models.ViewModel;
+@model List<UserRoleViewModel>
+
+@{
+    ViewData["Title"] = "EditUserInRole";
+}
+<div class="row">
+    <div class="container">
+        <div class="col-md-8">
+            <h2>Edit User In Role</h2>
+            <form method="post" asp-action="EditUserInRole">
+                <div class="card">
+                    <div class="card-header">
+                        User in this role
+                    </div>
+                    <div class="card-body">
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            <div>
+                                <input type="hidden" asp-for="@Model[i].UserId">
+                                <input asp-for="@Model[i].IsSelected" />
+                                <label asp-for="@Model[i].IsSelected"> @Model[i].UserName</label>
+                            </div>
+
+                        }
+                    </div>
+                    <div class="card-footer">
+                        <input type="submit" class="btn btn-primary" value="Save" />
+                        <a asp-action="RolesList" asp-controller="Account" class="btn btn-danger">Back to List</a>
+
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

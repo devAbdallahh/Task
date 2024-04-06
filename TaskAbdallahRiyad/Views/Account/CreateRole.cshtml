@@ -1,0 +1,34 @@
+﻿@model TaskAbdallahRiyad.Models.ViewModel.CreateRoleViewModel
+
+@{
+    ViewData["Title"] = "CreateRole";
+}
+
+<h1>Create New Role</h1>
+<div class="row">
+    <div class="container">
+        <div class="col-md-8">
+            <form asp-action="CreateRole" asp-controller="Account" method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="RoleName" class="control-label"></label>
+                    <input asp-for="RoleName" class="form-control" />
+                    <span asp-validation-for="RoleName" class="text-danger"></span>
+                </div>
+                <br />
+                <div class="form-group">
+                    <input type="submit" value="CreateRole" class="btn btn-primary" />
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

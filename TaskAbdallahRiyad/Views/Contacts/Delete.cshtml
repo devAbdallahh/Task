@@ -1,0 +1,37 @@
+﻿@model TaskAbdallahRiyad.Models.Contact
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<h3>Are you sure you want to Deleted this name contact @Model.FirstName ?</h3>
+
+<table class="table table-bordered FormController">
+    <tr>
+        <td><label asp-for="ContactId"></label></td>
+        <td>@Model.ContactId</td>
+    </tr>
+    <tr>
+        <td><label asp-for="FirstName"></label></td>
+        <td>@Model.FirstName</td>
+    </tr>
+    <tr>
+        <td><label asp-for="LastName"></label></td>
+        <td>@Model.LastName</td>
+    </tr>
+    <tr>
+        <td><label asp-for="Email"></label></td>
+        <td>@Model.Email</td>
+    </tr>
+
+    <tr>
+        <td><label asp-for="PhoneNumber"></label></td>
+        <td>@Model.PhoneNumber</td>
+    </tr>
+   
+</table>
+<br />
+<form asp-action="Delete" asp-controller="Contacts">
+    <input type="hidden" asp-for="ContactId" />
+    <input type="submit" value="Delete" class="btn btn-danger" />
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+</form>

@@ -1,0 +1,45 @@
+﻿@model TaskAbdallahRiyad.Models.ViewModel.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+<!--login a Account
+    Sharp95@@
+-->
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-12 col-sm-12">
+            <form asp-action="Login" method="post" asp-controller="Account" class="styleFormLogin">
+                <div class="screenLogin1">
+                    <h4 class="text-center" style="margin-top:-5px;">login Account</h4>
+                    <!--Email-->
+                    <div class="form-group FormLogin">
+                        <label asp-for="Email" class="control-label">Email</label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <!--Password-->
+                    <div class="form-group FormLogin">
+                        <label asp-for="Password" class="control-label">Password</label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <!--login-->
+                    <input type="submit" value="Login" class="Login" />
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

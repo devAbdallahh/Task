@@ -1,0 +1,197 @@
+.FormController {
+    width: 800px;
+}
+
+
+.line-container5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    float:right;
+    margin-bottom:15px;
+    margin-right:5px;
+}
+.table{
+    border:1px solid #dde5f4;
+}
+.btnSe {
+    background-color: #0094ff;
+    border: 1px solid #0094ff;
+}
+    .btnSe:hover{
+        color:#f1f7fe;
+    }
+    /*login-form*/
+    .styleFormLogin {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        overflow-y: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #dde5f4;
+        height: 110vh;
+    }
+
+
+
+.screenLogin1 {
+    background: #f1f7fe;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 0 0 2em #e6e9f9;
+    gap: 2em;
+    border: 1px solid #08526d;
+    width: 350px;
+    padding: 10px;
+    margin-bottom:50%;
+}
+
+    .screenLogin1 .FormLogin {
+        background: white;
+        box-shadow: 0 0 2em #e6e9f9;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        color: #4d4d4d;
+        margin-bottom: -40px;
+    }
+
+        .screenLogin1 .FormLogin input {
+            border: 1px solid #08526d;
+            height: 30px;
+            margin-bottom: 10px;
+        }
+
+    .screenLogin1 .Login {
+        cursor: pointer;
+        margin-top: 5px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        width: 100px;
+        padding: 5px;
+        background-color: #08526d;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+    }
+
+    .screenLogin1 .Creativity {
+        cursor: pointer;
+        border-radius: 30px;
+        margin-bottom: -15px;
+        margin-left: 60px;
+    }
+
+        .screenLogin1 .Creativity:hover {
+            color: red;
+        }
+
+button {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+/*Register-Form*/
+.styleFormRegister {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dde5f4;
+    height: 120vh;
+    border-radius: 30px;
+}
+
+
+
+.screenRegister {
+    background-color: #dde5f4;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 2em #e6e9f9;
+    gap: 2em;
+    border-radius: 30px;
+    border: 1px solid #08526d;
+    padding: 10px;
+    margin-bottom: 20%;
+}
+
+    .screenRegister .RegisterForm {
+        background-color: #dde5f4;
+        box-shadow: 0 0 2em #e6e9f9;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        color: #4d4d4d;
+        margin-bottom: -1px;
+    }
+
+        .screenRegister .RegisterForm input {
+            border: 1px solid #08526d;
+            height: 35px;
+            margin-bottom: 5px;
+        }
+
+    .screenRegister .Register {
+        cursor: pointer;
+        margin-top: 5px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        width: 100px;
+        padding: 5px;
+        background-color: #08526d;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+    }
+
+    .screenRegister .IHaveAccount {
+        cursor: pointer;
+        margin-top: 5px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        width: 150px;
+        padding: 5px;
+        background-color: #08526d;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+button {
+    cursor: pointer;
+}
+
+.screenRegister .Creativity {
+    cursor: pointer;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: -15px;
+    padding: 10px;
+}
+
+    .screenRegister .Creativity:hover {
+        color: red;
+    }
+
+.flex-container {
+    display: flex;
+    align-items: center;
+}

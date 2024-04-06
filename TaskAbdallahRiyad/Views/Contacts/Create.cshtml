@@ -1,0 +1,42 @@
+﻿@model TaskAbdallahRiyad.Models.Contact
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create New Contact</h1>
+<h2 class="text-center">Please Enter the information necessary to create a new contact</h2>
+<form asp-action="Create" asp-controller="Contacts" method="post" enctype="multipart/form-data" class="FormController">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="FirstName" class="control-label"></label>
+        <input asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName" class="control-label"></label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PhoneNumber" class="control-label"></label>
+        <input asp-for="PhoneNumber" class="form-control" />
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+    </div>
+    
+    <br />
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-success" />
+        <a asp-action="Index" class="btn btn-primary">Back to List</a>
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

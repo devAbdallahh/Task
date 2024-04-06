@@ -1,0 +1,73 @@
+﻿@model TaskAbdallahRiyad.Models.ViewModel.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register";
+}
+<!--Register New Account-->
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-12 col-sm-12">
+            <form asp-action="Register" method="post" asp-controller="Account" class="styleFormRegister">
+                <div class="screenRegister">
+                    <h4 class="text-center  ">Register New Account</h4>
+                    <!--FullName-->
+                    <div class="form-group RegisterForm">
+                        <label asp-for="FullName" class="control-label">FullName</label>
+                        <input asp-for="FullName" class="form-control" />
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+                    <!--Email-->
+                    <div class="form-group RegisterForm">
+                        <label asp-for="Email" class="control-label">Email</label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <!--ConfirmEmail-->
+                    <div class="form-group RegisterForm">
+                        <label asp-for="ConfirmEmail" class="control-label">ConfirmEmail</label>
+                        <input asp-for="ConfirmEmail" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <!--Password-->
+                    <div class="form-group RegisterForm">
+                        <label asp-for="Password" class="control-label">Password</label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <!--ConfirmPassword-->
+                    <div class="form-group RegisterForm">
+                        <label asp-for="ConfirmPassword" class="control-label">ConfirmPassword</label>
+                        <input asp-for="ConfirmPassword" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <!--City-->
+                    <div class="form-group RegisterForm">
+                        <label asp-for="City" class="control-label">City</label>
+                        <input asp-for="City" class="form-control" />
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+                    <!--PhoneNumber-->
+                    <div class="form-group RegisterForm">
+                        <label asp-for="PhoneNumber" class="control-label">PhoneNumber</label>
+                        <input asp-for="PhoneNumber" class="form-control" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                    <!--Register-->
+                    <div class="flex-container">
+                        <input type="submit" value="Register" class="Register" />
+                        <a asp-action="Login" class="IHaveAccount" asp-controller="Account">Ihave a Account</a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,34 @@
+﻿@model TaskAbdallahRiyad.Models.Contact
+
+@{
+    ViewData["Title"] = "Details";
+}
+<h3>Contact information @Model.FirstName ?</h3>
+<table class="table table-bordered FormController">
+    <tr>
+        <td><label asp-for="ContactId"></label></td>
+        <td>@Model.ContactId</td>
+    </tr>
+    <tr>
+        <td><label asp-for="FirstName"></label></td>
+        <td>@Model.FirstName</td>
+    </tr>
+    <tr>
+        <td><label asp-for="LastName"></label></td>
+        <td>@Model.LastName</td>
+    </tr>
+    <tr>
+        <td><label asp-for="Email"></label></td>
+        <td>@Model.Email</td>
+    </tr>
+
+    <tr>
+        <td><label asp-for="PhoneNumber"></label></td>
+        <td>@Model.PhoneNumber</td>
+    </tr>
+   
+</table>
+<br />
+<div>
+    <a asp-action="Index" asp-controller="Contacts" class="btn btn-primary">Back to List</a>
+</div>
